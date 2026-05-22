@@ -1,0 +1,5 @@
+# Normalize text files to LF in the repository; check out with native EOL.
+* text=auto
+
+# DVB transport streams are binary — never apply end-of-line conversion.
+*.ts binary

@@ -1,0 +1,34 @@
+# ---- Build outputs (Visual Studio / MSBuild) ----
+[Bb]in/
+[Dd]ebug/
+[Rr]elease/
+x64/
+Win32/
+.vs/
+*.obj
+*.exe
+*.pdb
+*.ilk
+*.idb
+*.tlog
+*.log
+*.lastbuildstate
+*.recipe
+*.suo
+*.ipch
+*.aps
+*.user.bak
+
+# ---- CMake out-of-source build directory ----
+build/
+CMakeCache.txt
+CMakeFiles/
+CMakeUserPresets.json
+
+# ---- Generated test data (regenerate via: DVBAnalyzer --gen-ts simulated_dvb.ts) ----
+dvbtests_sample.ts
+cmake_sample.ts
+
+# Kept intentionally:
+#   DVBAnalyzer/third_party/googletest  (vendored so tests build offline)
+#   DVBAnalyzer/simulated_dvb.ts        (small sample transport stream)

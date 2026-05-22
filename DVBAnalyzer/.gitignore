@@ -1,0 +1,31 @@
+# --- Visual Studio / MSVC build outputs ---
+[Bb]in/
+[Dd]ebug/
+[Rr]elease/
+x64/
+Win32/
+.vs/
+*.obj
+*.exe
+*.pdb
+*.ilk
+*.idb
+*.tlog
+*.log
+*.lastbuildstate
+*.recipe
+
+# --- CMake out-of-source build directory & artifacts ---
+build/
+CMakeCache.txt
+CMakeFiles/
+CMakeUserPresets.json
+*.cmake.stamp
+
+# --- Generated test data (regenerate with: DVBAnalyzer --gen-ts simulated_dvb.ts) ---
+dvbtests_sample.ts
+cmake_sample.ts
+
+# Note: third_party/googletest is intentionally vendored (committed) so the
+# test project builds offline with no package manager. The sample stream
+# simulated_dvb.ts is kept as convenient sample data.

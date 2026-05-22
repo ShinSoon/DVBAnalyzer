@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="Current" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <!-- Runs the binary transport-stream path against the bundled sample.
+         Working dir = project folder so relative file names resolve here.
+         To switch modes, change Command Arguments in Project > Properties > Debugging:
+           "simulated_dvb_si.txt" parses the text format;
+           the gen-ts flag regenerates the binary sample. -->
+    <LocalDebuggerCommandArguments>simulated_dvb.ts</LocalDebuggerCommandArguments>
+    <LocalDebuggerWorkingDirectory>$(ProjectDir)</LocalDebuggerWorkingDirectory>
+    <DebuggerFlavor>WindowsLocalDebugger</DebuggerFlavor>
+  </PropertyGroup>
+</Project>

@@ -1,0 +1,39 @@
+# Simulated DVB Service Information Data
+# Format: RECORD_TYPE|Field1|Field2|...
+# Time Format: YYYY-MM-DD HH:MM:SS (Assumed UTC by parser function)
+
+# --- Service Description Table (SDT) Entries ---
+# SDT|ONID|TSID|ServiceID|EIT_Schedule_flag|EIT_PF_flag|RunningStatus|FreeCA|ServiceType|ProviderName|ServiceName
+# Service Types: 0x01=TV, 0x02=Radio, 0x11(17)=HD TV, 0x19(25)=UHD TV
+# Running Status: 0=undef, 1=not_running, 2=starts_soon, 3=pausing, 4=running, 5+=reserved
+SDT|10|1001|101|1|1|4|1|17|MYBC|Channel ONE HD
+SDT|10|1001|102|1|1|4|1|1|MYBC|Channel TWO SD
+SDT|10|1001|103|1|1|1|1|2|MYBC|Radio ONE
+SDT|20|2002|201|1|1|4|0|25|PayView|Movie Central UHD
+
+# --- Event Information Table (EIT) Entries ---
+# EIT|ONID|TSID|ServiceID|EventID|StartTime|DurationSec|EventName|EventDesc|Type(PF/SCHED)
+
+# EIT Present/Following for Channel ONE HD
+EIT|10|1001|101|5001|2024-03-15 10:00:00|3600|Morning News|The latest news headlines.|PF
+EIT|10|1001|101|5002|2024-03-15 11:00:00|1800|Cooking Show|Making simple snacks.|PF
+
+# EIT Schedule for Channel ONE HD
+EIT|10|1001|101|5003|2024-03-15 11:30:00|3600|Gardening Tips|How to prepare your garden.|SCHED
+EIT|10|1001|101|5004|2024-03-15 12:30:00|7200|Feature Film: The Parser|A gripping tale of data.|SCHED
+EIT|10|1001|101|5005|2024-03-15 14:30:00|3600|Sports Round-Up|Highlights from the week.|SCHED
+
+# EIT P/F for Channel TWO SD
+EIT|10|1001|102|6001|2024-03-15 10:30:00|5400|Cartoon Hour|Classic cartoons.|PF
+EIT|10|1001|102|6002|2024-03-15 12:00:00|3600|Quiz Time|Test your knowledge.|PF
+
+# EIT Schedule for Channel TWO SD
+EIT|10|1001|102|6003|2024-03-15 13:00:00|3600|Documentary|Exploring the Amazon.|SCHED
+EIT|10|1001|102|6004|2024-03-15 14:00:00|1800|Local News|Updates from the region.|SCHED
+
+# EIT P/F for Movie Central UHD (Pay TV)
+EIT|20|2002|201|7001|2024-03-15 10:00:00|9000|Blockbuster Movie|Action adventure premiere.|PF
+EIT|20|2002|201|7002|2024-03-15 12:30:00|8100|Sci-Fi Classic|Journey to another world.|PF
+
+# EIT Schedule for Movie Central UHD
+EIT|20|2002|201|7003|2024-03-15 14:45:00|7200|Animated Feature|Family fun adventure.|SCHED
